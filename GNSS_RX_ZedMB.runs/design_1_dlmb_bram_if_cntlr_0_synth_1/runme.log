@@ -1,0 +1,1391 @@
+
+*** Running vivado
+    with args -log design_1_dlmb_bram_if_cntlr_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_dlmb_bram_if_cntlr_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_1_dlmb_bram_if_cntlr_0.tcl -notrace
+Command: synth_design -top design_1_dlmb_bram_if_cntlr_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3632 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 381.641 ; gain = 98.434
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/synth/design_1_dlmb_bram_if_cntlr_0.vhd:106]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000011111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 1 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 1 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 1 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 1 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 1 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 1 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 20 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3116' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/synth/design_1_dlmb_bram_if_cntlr_0.vhd:272]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3240]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000011111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 1 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 1 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 1 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 1 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 1 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 1 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 20 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_BASEADDR bound to: 32'b11111111111111111111111111111111 
+	Parameter C_S_AXI_CTRL_HIGHADDR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 1 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_mux' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2524' bound to instance 'lmb_mux_I' of component 'lmb_mux' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3463]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2610]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 1 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2107' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2678]
+INFO: [Synth 8-638] synthesizing module 'pselect_mask' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2122]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'pselect_mask' (1#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2122]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (2#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2610]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_ENCODE bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'checkbit_handler' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1426' bound to instance 'checkbit_handler_I1' of component 'checkbit_handler' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3686]
+INFO: [Synth 8-638] synthesizing module 'checkbit_handler' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1443]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_ENCODE bound to: 0 - type: bool 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk0_1' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1628]
+INFO: [Synth 8-638] synthesizing module 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:920]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:990]
+INFO: [Synth 8-638] synthesizing module 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:312]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:336]
+INFO: [Synth 8-256] done synthesizing module 'MB_LUT6' (3#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:312]
+INFO: [Synth 8-256] done synthesizing module 'Parity' (4#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:920]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk0_2' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1633]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk0_3' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1638]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'ParityEnable' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1255' bound to instance 'Parity_chk0_4' of component 'ParityEnable' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1643]
+INFO: [Synth 8-638] synthesizing module 'ParityEnable' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1267]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 4 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b1001011001101001011010011001011000000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1313]
+INFO: [Synth 8-638] synthesizing module 'MB_LUT6__parameterized1' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:312]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b1001011001101001011010011001011000000000000000000000000000000000 
+	Parameter INIT bound to: 64'b1001011001101001011010011001011000000000000000000000000000000000 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:336]
+INFO: [Synth 8-256] done synthesizing module 'MB_LUT6__parameterized1' (4#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:312]
+INFO: [Synth 8-256] done synthesizing module 'ParityEnable' (5#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1267]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk1_1' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1654]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk1_2' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1659]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk1_3' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1664]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'ParityEnable' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1255' bound to instance 'Parity_chk1_4' of component 'ParityEnable' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1669]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk2_1' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1680]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk2_2' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1685]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk2_3' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1690]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'ParityEnable' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1255' bound to instance 'Parity_chk2_4' of component 'ParityEnable' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1695]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk3_1' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1706]
+INFO: [Synth 8-638] synthesizing module 'Parity__parameterized2' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:920]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 8 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT1' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1074]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b1001011001101001011010011001011001101001100101101001011001101001 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT2_N' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1087]
+INFO: [Synth 8-638] synthesizing module 'MB_LUT6__parameterized4' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:312]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b1001011001101001011010011001011001101001100101101001011001101001 
+	Parameter INIT bound to: 64'b1001011001101001011010011001011001101001100101101001011001101001 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:336]
+INFO: [Synth 8-256] done synthesizing module 'MB_LUT6__parameterized4' (5#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:312]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXF7' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:444' bound to instance 'MUXF7_LUT1' of component 'MB_MUXF7' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1100]
+INFO: [Synth 8-638] synthesizing module 'MB_MUXF7' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:459]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'MUXF7' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:469]
+INFO: [Synth 8-256] done synthesizing module 'MB_MUXF7' (6#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:459]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT3' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1109]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b1001011001101001011010011001011001101001100101101001011001101001 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT4_N' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1122]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXF7' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:444' bound to instance 'MUXF7_LUT2' of component 'MB_MUXF7' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1135]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXF8' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:487' bound to instance 'MUXF8_LUT' of component 'MB_MUXF8' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1144]
+INFO: [Synth 8-638] synthesizing module 'MB_MUXF8' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:502]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'MUXF8' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:512]
+INFO: [Synth 8-256] done synthesizing module 'MB_MUXF8' (7#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:502]
+INFO: [Synth 8-256] done synthesizing module 'Parity__parameterized2' (7#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:920]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk3_2' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1711]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'ParityEnable' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1255' bound to instance 'Parity_chk3_3' of component 'ParityEnable' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1716]
+INFO: [Synth 8-638] synthesizing module 'ParityEnable__parameterized2' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1267]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 2 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b1001011001101001011010011001011000000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1313]
+INFO: [Synth 8-256] done synthesizing module 'ParityEnable__parameterized2' (7#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1267]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk4_1' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1727]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk4_2' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1732]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk4_3' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1737]
+INFO: [Synth 8-638] synthesizing module 'Parity__parameterized4' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:920]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 2 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:990]
+INFO: [Synth 8-256] done synthesizing module 'Parity__parameterized4' (7#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:920]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk5_1' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1748]
+INFO: [Synth 8-638] synthesizing module 'Parity__parameterized6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:920]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 7 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1019]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b1001011001101001011010011001011001101001100101101001011001101001 
+INFO: [Synth 8-3491] module 'MB_LUT6' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:293' bound to instance 'XOR6_LUT_N' of component 'MB_LUT6' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1032]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXF7' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:444' bound to instance 'MUXF7_LUT' of component 'MB_MUXF7' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1045]
+INFO: [Synth 8-256] done synthesizing module 'Parity__parameterized6' (7#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:920]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk6_1' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1763]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk6_2' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1768]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk6_3' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1773]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk6_4' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1778]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk6_5' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1783]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk6_6' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1788]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Parity' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:909' bound to instance 'Parity_chk6_7' of component 'Parity' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1793]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXF7' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:444' bound to instance 'UE_MUXF7' of component 'MB_MUXF7' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1819]
+INFO: [Synth 8-256] done synthesizing module 'checkbit_handler' (8#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1443]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1100001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1100001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+INFO: [Synth 8-638] synthesizing module 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:375]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'MUXCY_L' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:385]
+INFO: [Synth 8-256] done synthesizing module 'MB_MUXCY' (9#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:375]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-638] synthesizing module 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:417]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:427]
+INFO: [Synth 8-256] done synthesizing module 'MB_XORCY' (10#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:417]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1010001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized1' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1010001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized1' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0110001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized3' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0110001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized3' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1110001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized5' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1110001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized5' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1001001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized7' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1001001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized7' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0101001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized9' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0101001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized9' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1101001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized11' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1101001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized11' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0011001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized13' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0011001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized13' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1011001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized15' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1011001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized15' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0111001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized17' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0111001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized17' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1111001 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized19' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1111001 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized19' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1000101 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized21' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1000101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized21' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0100101 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized23' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0100101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized23' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1100101 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized25' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1100101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized25' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0010101 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized27' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0010101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized27' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1010101 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized29' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1010101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized29' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0110101 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized31' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0110101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized31' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1110101 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized33' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1110101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_MUXCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:360' bound to instance 'Corr_MUXCY' of component 'MB_MUXCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2001]
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:403' bound to instance 'Corr_XORCY' of component 'MB_XORCY' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2010]
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized33' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0001101 
+INFO: [Synth 8-3491] module 'Correct_One_Bit' declared at 'c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1928' bound to instance 'Correct_One_Bit_I' of component 'Correct_One_Bit' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3707]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized35' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0001101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized35' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1001101 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized37' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1001101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized37' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0101101 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized39' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0101101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized39' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1101101 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized41' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1101101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized41' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0011101 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized43' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0011101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized43' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1011101 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized45' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1011101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized45' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0111101 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized47' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0111101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized47' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1111101 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized49' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1111101 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized49' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1000011 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized51' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1000011 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized51' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0100011 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized53' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0100011 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized53' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1100011 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized55' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1100011 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized55' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0010011 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized57' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0010011 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized57' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1010011 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized59' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b1010011 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized59' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0110011 
+INFO: [Synth 8-638] synthesizing module 'Correct_One_Bit__parameterized61' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter Correct_Value bound to: 7'b0110011 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Correct_One_Bit__parameterized61' (11#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1938]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_ENCODE bound to: 1 - type: bool 
+INFO: [Synth 8-638] synthesizing module 'checkbit_handler__parameterized1' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1443]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_ENCODE bound to: 1 - type: bool 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'XOR18' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:690]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 64'b0110100110010110100101100110100110010110011010010110100110010110 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'XOR18' (12#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:690]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_SIZE bound to: 6 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'checkbit_handler__parameterized1' (12#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:1443]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_S_AXI_BASEADDR bound to: -1 - type: integer 
+	Parameter C_S_AXI_HIGHADDR bound to: 0 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_REGADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axi_interface' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2308]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter C_S_AXI_BASEADDR bound to: -1 - type: integer 
+	Parameter C_S_AXI_HIGHADDR bound to: 0 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_REGADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_DWIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:547]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE' [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:576]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE' (13#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:547]
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter C_TARGET bound to: 3 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'axi_interface' (14#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2308]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (15#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3240]
+INFO: [Synth 8-256] done synthesizing module 'design_1_dlmb_bram_if_cntlr_0' (16#1) [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/synth/design_1_dlmb_bram_if_cntlr_0.vhd:106]
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port CheckIn[0]
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port CheckIn[1]
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port CheckIn[2]
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port CheckIn[3]
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port CheckIn[4]
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port CheckIn[5]
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port CheckIn[6]
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port Enable_ECC
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port UE_Q
+WARNING: [Synth 8-3331] design checkbit_handler__parameterized1 has unconnected port CE_Q
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[31]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[30]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[29]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[28]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[27]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[26]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[25]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[24]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[23]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[22]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[21]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[20]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[19]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[18]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[17]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[16]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[15]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[14]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[13]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[12]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[11]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[10]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[1]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_AWADDR[0]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[31]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[30]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[29]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[28]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[27]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[26]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[25]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[24]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[23]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[22]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[21]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[20]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[19]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[18]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[17]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[16]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[15]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[14]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[13]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[12]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[11]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[10]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[1]
+WARNING: [Synth 8-3331] design axi_interface has unconnected port S_AXI_ARADDR[0]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[0]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[2]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[3]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[4]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[5]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[6]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[7]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[8]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[9]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[10]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[11]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[12]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[13]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[14]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[15]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[16]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[17]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[18]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[19]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[20]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[21]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[22]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[23]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[24]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[25]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[26]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[27]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[28]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[29]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[30]
+WARNING: [Synth 8-3331] design pselect_mask has unconnected port A[31]
+WARNING: [Synth 8-3331] design lmb_mux has unconnected port LMB_Clk
+WARNING: [Synth 8-3331] design lmb_mux has unconnected port LMB_Rst
+WARNING: [Synth 8-3331] design lmb_mux has unconnected port LMB1_ABus[0]
+WARNING: [Synth 8-3331] design lmb_mux has unconnected port LMB1_ABus[1]
+WARNING: [Synth 8-3331] design lmb_mux has unconnected port LMB1_ABus[2]
+WARNING: [Synth 8-3331] design lmb_mux has unconnected port LMB1_ABus[3]
+WARNING: [Synth 8-3331] design lmb_mux has unconnected port LMB1_ABus[4]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 439.629 ; gain = 156.422
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 439.629 ; gain = 156.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 439.629 ; gain = 156.422
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 99 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  MUXCY_L => MUXCY: 44 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 802.531 ; gain = 1.566
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 802.531 ; gain = 519.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 802.531 ; gain = 519.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 802.531 ; gain = 519.324
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "syndrome_3_to_5_zero" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 802.531 ; gain = 519.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      8 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               20 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module checkbit_handler 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module axi_interface 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module lmb_bram_if_cntlr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 8     
+	               20 Bit    Registers := 1     
+	                7 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 802.531 ; gain = 519.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 802.531 ; gain = 519.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 830.320 ; gain = 547.113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 839.344 ; gain = 556.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 839.344 ; gain = 556.137
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 839.344 ; gain = 556.137
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 839.344 ; gain = 556.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 839.344 ; gain = 556.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 839.344 ; gain = 556.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 839.344 ; gain = 556.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     5|
+|2     |LUT2    |    52|
+|3     |LUT3    |    62|
+|4     |LUT4    |    21|
+|5     |LUT5    |    83|
+|6     |LUT6    |   199|
+|7     |MUXCY_L |    44|
+|8     |MUXF7   |    13|
+|9     |MUXF8   |     4|
+|10    |XORCY   |    38|
+|11    |FDRE    |   390|
+|12    |FDSE    |     1|
++------+--------+------+
+
+Report Instance Areas: 
++------+------------------------------------------------------------------------+---------------------------------+------+
+|      |Instance                                                                |Module                           |Cells |
++------+------------------------------------------------------------------------+---------------------------------+------+
+|1     |top                                                                     |                                 |   912|
+|2     |  U0                                                                    |lmb_bram_if_cntlr                |   912|
+|3     |    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.One_LMB.checkbit_handler_I2  |checkbit_handler__parameterized1 |    76|
+|4     |      \Encode_Bits.Parity_chk5_1                                        |Parity_167                       |     5|
+|5     |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_209                      |     5|
+|6     |      \Encode_Bits.XOR18_I0                                             |XOR18                            |     7|
+|7     |        \Using_FPGA.XOR18_XORCY                                         |MB_XORCY_203                     |     2|
+|8     |        \Using_FPGA.XOR6_1_LUT                                          |MB_LUT6_204                      |     1|
+|9     |        \Using_FPGA.XOR6_2_LUT                                          |MB_LUT6_205                      |     1|
+|10    |        \Using_FPGA.XOR6_3_LUT                                          |MB_LUT6_206                      |     1|
+|11    |        \Using_FPGA.XOR_1st_MUXCY                                       |MB_MUXCY_207                     |     1|
+|12    |        \Using_FPGA.XOR_2nd_MUXCY                                       |MB_MUXCY_208                     |     1|
+|13    |      \Encode_Bits.XOR18_I1                                             |XOR18_168                        |     7|
+|14    |        \Using_FPGA.XOR18_XORCY                                         |MB_XORCY_197                     |     2|
+|15    |        \Using_FPGA.XOR6_1_LUT                                          |MB_LUT6_198                      |     1|
+|16    |        \Using_FPGA.XOR6_2_LUT                                          |MB_LUT6_199                      |     1|
+|17    |        \Using_FPGA.XOR6_3_LUT                                          |MB_LUT6_200                      |     1|
+|18    |        \Using_FPGA.XOR_1st_MUXCY                                       |MB_MUXCY_201                     |     1|
+|19    |        \Using_FPGA.XOR_2nd_MUXCY                                       |MB_MUXCY_202                     |     1|
+|20    |      \Encode_Bits.XOR18_I2                                             |XOR18_169                        |     8|
+|21    |        \Using_FPGA.XOR18_XORCY                                         |MB_XORCY_191                     |     2|
+|22    |        \Using_FPGA.XOR6_1_LUT                                          |MB_LUT6_192                      |     1|
+|23    |        \Using_FPGA.XOR6_2_LUT                                          |MB_LUT6_193                      |     1|
+|24    |        \Using_FPGA.XOR6_3_LUT                                          |MB_LUT6_194                      |     2|
+|25    |        \Using_FPGA.XOR_1st_MUXCY                                       |MB_MUXCY_195                     |     1|
+|26    |        \Using_FPGA.XOR_2nd_MUXCY                                       |MB_MUXCY_196                     |     1|
+|27    |      \Encode_Bits.XOR18_I3                                             |XOR18_170                        |    10|
+|28    |        \Using_FPGA.XOR18_XORCY                                         |MB_XORCY_185                     |     2|
+|29    |        \Using_FPGA.XOR6_1_LUT                                          |MB_LUT6_186                      |     1|
+|30    |        \Using_FPGA.XOR6_2_LUT                                          |MB_LUT6_187                      |     1|
+|31    |        \Using_FPGA.XOR6_3_LUT                                          |MB_LUT6_188                      |     4|
+|32    |        \Using_FPGA.XOR_1st_MUXCY                                       |MB_MUXCY_189                     |     1|
+|33    |        \Using_FPGA.XOR_2nd_MUXCY                                       |MB_MUXCY_190                     |     1|
+|34    |      \Encode_Bits.XOR18_I4                                             |XOR18_171                        |    14|
+|35    |        \Using_FPGA.XOR18_XORCY                                         |MB_XORCY_179                     |     2|
+|36    |        \Using_FPGA.XOR6_1_LUT                                          |MB_LUT6_180                      |     2|
+|37    |        \Using_FPGA.XOR6_2_LUT                                          |MB_LUT6_181                      |     4|
+|38    |        \Using_FPGA.XOR6_3_LUT                                          |MB_LUT6_182                      |     4|
+|39    |        \Using_FPGA.XOR_1st_MUXCY                                       |MB_MUXCY_183                     |     1|
+|40    |        \Using_FPGA.XOR_2nd_MUXCY                                       |MB_MUXCY_184                     |     1|
+|41    |      \Encode_Bits.XOR18_I6                                             |XOR18_172                        |    25|
+|42    |        \Using_FPGA.XOR18_XORCY                                         |MB_XORCY_173                     |     2|
+|43    |        \Using_FPGA.XOR6_1_LUT                                          |MB_LUT6_174                      |     7|
+|44    |        \Using_FPGA.XOR6_2_LUT                                          |MB_LUT6_175                      |     7|
+|45    |        \Using_FPGA.XOR6_3_LUT                                          |MB_LUT6_176                      |     7|
+|46    |        \Using_FPGA.XOR_1st_MUXCY                                       |MB_MUXCY_177                     |     1|
+|47    |        \Using_FPGA.XOR_2nd_MUXCY                                       |MB_MUXCY_178                     |     1|
+|48    |    \ECC.Gen_Correct_Data[0].Correct_One_Bit_I                          |Correct_One_Bit                  |     2|
+|49    |      Corr_MUXCY                                                        |MB_MUXCY_165                     |     1|
+|50    |      Corr_XORCY                                                        |MB_XORCY_166                     |     1|
+|51    |    \ECC.Gen_Correct_Data[10].Correct_One_Bit_I                         |Correct_One_Bit__parameterized19 |     2|
+|52    |      Corr_MUXCY                                                        |MB_MUXCY_163                     |     1|
+|53    |      Corr_XORCY                                                        |MB_XORCY_164                     |     1|
+|54    |    \ECC.Gen_Correct_Data[11].Correct_One_Bit_I                         |Correct_One_Bit__parameterized21 |     2|
+|55    |      Corr_MUXCY                                                        |MB_MUXCY_161                     |     1|
+|56    |      Corr_XORCY                                                        |MB_XORCY_162                     |     1|
+|57    |    \ECC.Gen_Correct_Data[12].Correct_One_Bit_I                         |Correct_One_Bit__parameterized23 |     2|
+|58    |      Corr_MUXCY                                                        |MB_MUXCY_159                     |     1|
+|59    |      Corr_XORCY                                                        |MB_XORCY_160                     |     1|
+|60    |    \ECC.Gen_Correct_Data[13].Correct_One_Bit_I                         |Correct_One_Bit__parameterized25 |     2|
+|61    |      Corr_MUXCY                                                        |MB_MUXCY_157                     |     1|
+|62    |      Corr_XORCY                                                        |MB_XORCY_158                     |     1|
+|63    |    \ECC.Gen_Correct_Data[14].Correct_One_Bit_I                         |Correct_One_Bit__parameterized27 |     2|
+|64    |      Corr_MUXCY                                                        |MB_MUXCY_155                     |     1|
+|65    |      Corr_XORCY                                                        |MB_XORCY_156                     |     1|
+|66    |    \ECC.Gen_Correct_Data[15].Correct_One_Bit_I                         |Correct_One_Bit__parameterized29 |     2|
+|67    |      Corr_MUXCY                                                        |MB_MUXCY_153                     |     1|
+|68    |      Corr_XORCY                                                        |MB_XORCY_154                     |     1|
+|69    |    \ECC.Gen_Correct_Data[16].Correct_One_Bit_I                         |Correct_One_Bit__parameterized31 |     2|
+|70    |      Corr_MUXCY                                                        |MB_MUXCY_151                     |     1|
+|71    |      Corr_XORCY                                                        |MB_XORCY_152                     |     1|
+|72    |    \ECC.Gen_Correct_Data[17].Correct_One_Bit_I                         |Correct_One_Bit__parameterized33 |     2|
+|73    |      Corr_MUXCY                                                        |MB_MUXCY_149                     |     1|
+|74    |      Corr_XORCY                                                        |MB_XORCY_150                     |     1|
+|75    |    \ECC.Gen_Correct_Data[18].Correct_One_Bit_I                         |Correct_One_Bit__parameterized35 |     2|
+|76    |      Corr_MUXCY                                                        |MB_MUXCY_147                     |     1|
+|77    |      Corr_XORCY                                                        |MB_XORCY_148                     |     1|
+|78    |    \ECC.Gen_Correct_Data[19].Correct_One_Bit_I                         |Correct_One_Bit__parameterized37 |     2|
+|79    |      Corr_MUXCY                                                        |MB_MUXCY_145                     |     1|
+|80    |      Corr_XORCY                                                        |MB_XORCY_146                     |     1|
+|81    |    \ECC.Gen_Correct_Data[1].Correct_One_Bit_I                          |Correct_One_Bit__parameterized1  |     2|
+|82    |      Corr_MUXCY                                                        |MB_MUXCY_143                     |     1|
+|83    |      Corr_XORCY                                                        |MB_XORCY_144                     |     1|
+|84    |    \ECC.Gen_Correct_Data[20].Correct_One_Bit_I                         |Correct_One_Bit__parameterized39 |     2|
+|85    |      Corr_MUXCY                                                        |MB_MUXCY_141                     |     1|
+|86    |      Corr_XORCY                                                        |MB_XORCY_142                     |     1|
+|87    |    \ECC.Gen_Correct_Data[21].Correct_One_Bit_I                         |Correct_One_Bit__parameterized41 |     2|
+|88    |      Corr_MUXCY                                                        |MB_MUXCY_139                     |     1|
+|89    |      Corr_XORCY                                                        |MB_XORCY_140                     |     1|
+|90    |    \ECC.Gen_Correct_Data[22].Correct_One_Bit_I                         |Correct_One_Bit__parameterized43 |     2|
+|91    |      Corr_MUXCY                                                        |MB_MUXCY_137                     |     1|
+|92    |      Corr_XORCY                                                        |MB_XORCY_138                     |     1|
+|93    |    \ECC.Gen_Correct_Data[23].Correct_One_Bit_I                         |Correct_One_Bit__parameterized45 |     2|
+|94    |      Corr_MUXCY                                                        |MB_MUXCY_135                     |     1|
+|95    |      Corr_XORCY                                                        |MB_XORCY_136                     |     1|
+|96    |    \ECC.Gen_Correct_Data[24].Correct_One_Bit_I                         |Correct_One_Bit__parameterized47 |     2|
+|97    |      Corr_MUXCY                                                        |MB_MUXCY_133                     |     1|
+|98    |      Corr_XORCY                                                        |MB_XORCY_134                     |     1|
+|99    |    \ECC.Gen_Correct_Data[25].Correct_One_Bit_I                         |Correct_One_Bit__parameterized49 |     2|
+|100   |      Corr_MUXCY                                                        |MB_MUXCY_131                     |     1|
+|101   |      Corr_XORCY                                                        |MB_XORCY_132                     |     1|
+|102   |    \ECC.Gen_Correct_Data[26].Correct_One_Bit_I                         |Correct_One_Bit__parameterized51 |     2|
+|103   |      Corr_MUXCY                                                        |MB_MUXCY_129                     |     1|
+|104   |      Corr_XORCY                                                        |MB_XORCY_130                     |     1|
+|105   |    \ECC.Gen_Correct_Data[27].Correct_One_Bit_I                         |Correct_One_Bit__parameterized53 |     2|
+|106   |      Corr_MUXCY                                                        |MB_MUXCY_127                     |     1|
+|107   |      Corr_XORCY                                                        |MB_XORCY_128                     |     1|
+|108   |    \ECC.Gen_Correct_Data[28].Correct_One_Bit_I                         |Correct_One_Bit__parameterized55 |     2|
+|109   |      Corr_MUXCY                                                        |MB_MUXCY_125                     |     1|
+|110   |      Corr_XORCY                                                        |MB_XORCY_126                     |     1|
+|111   |    \ECC.Gen_Correct_Data[29].Correct_One_Bit_I                         |Correct_One_Bit__parameterized57 |     2|
+|112   |      Corr_MUXCY                                                        |MB_MUXCY_123                     |     1|
+|113   |      Corr_XORCY                                                        |MB_XORCY_124                     |     1|
+|114   |    \ECC.Gen_Correct_Data[2].Correct_One_Bit_I                          |Correct_One_Bit__parameterized3  |     2|
+|115   |      Corr_MUXCY                                                        |MB_MUXCY_121                     |     1|
+|116   |      Corr_XORCY                                                        |MB_XORCY_122                     |     1|
+|117   |    \ECC.Gen_Correct_Data[30].Correct_One_Bit_I                         |Correct_One_Bit__parameterized59 |     2|
+|118   |      Corr_MUXCY                                                        |MB_MUXCY_119                     |     1|
+|119   |      Corr_XORCY                                                        |MB_XORCY_120                     |     1|
+|120   |    \ECC.Gen_Correct_Data[31].Correct_One_Bit_I                         |Correct_One_Bit__parameterized61 |     2|
+|121   |      Corr_MUXCY                                                        |MB_MUXCY_117                     |     1|
+|122   |      Corr_XORCY                                                        |MB_XORCY_118                     |     1|
+|123   |    \ECC.Gen_Correct_Data[3].Correct_One_Bit_I                          |Correct_One_Bit__parameterized5  |     2|
+|124   |      Corr_MUXCY                                                        |MB_MUXCY_115                     |     1|
+|125   |      Corr_XORCY                                                        |MB_XORCY_116                     |     1|
+|126   |    \ECC.Gen_Correct_Data[4].Correct_One_Bit_I                          |Correct_One_Bit__parameterized7  |     2|
+|127   |      Corr_MUXCY                                                        |MB_MUXCY_113                     |     1|
+|128   |      Corr_XORCY                                                        |MB_XORCY_114                     |     1|
+|129   |    \ECC.Gen_Correct_Data[5].Correct_One_Bit_I                          |Correct_One_Bit__parameterized9  |     2|
+|130   |      Corr_MUXCY                                                        |MB_MUXCY_111                     |     1|
+|131   |      Corr_XORCY                                                        |MB_XORCY_112                     |     1|
+|132   |    \ECC.Gen_Correct_Data[6].Correct_One_Bit_I                          |Correct_One_Bit__parameterized11 |     2|
+|133   |      Corr_MUXCY                                                        |MB_MUXCY_109                     |     1|
+|134   |      Corr_XORCY                                                        |MB_XORCY_110                     |     1|
+|135   |    \ECC.Gen_Correct_Data[7].Correct_One_Bit_I                          |Correct_One_Bit__parameterized13 |     2|
+|136   |      Corr_MUXCY                                                        |MB_MUXCY_107                     |     1|
+|137   |      Corr_XORCY                                                        |MB_XORCY_108                     |     1|
+|138   |    \ECC.Gen_Correct_Data[8].Correct_One_Bit_I                          |Correct_One_Bit__parameterized15 |     2|
+|139   |      Corr_MUXCY                                                        |MB_MUXCY_105                     |     1|
+|140   |      Corr_XORCY                                                        |MB_XORCY_106                     |     1|
+|141   |    \ECC.Gen_Correct_Data[9].Correct_One_Bit_I                          |Correct_One_Bit__parameterized17 |     2|
+|142   |      Corr_MUXCY                                                        |MB_MUXCY                         |     1|
+|143   |      Corr_XORCY                                                        |MB_XORCY                         |     1|
+|144   |    \ECC.Has_AXI.AXI.axi_I                                              |axi_interface                    |   269|
+|145   |      \S_AXI_RDATA_DFF[0].S_AXI_RDATA_FDRE                              |MB_FDRE                          |     8|
+|146   |      \S_AXI_RDATA_DFF[10].S_AXI_RDATA_FDRE                             |MB_FDRE_74                       |     4|
+|147   |      \S_AXI_RDATA_DFF[11].S_AXI_RDATA_FDRE                             |MB_FDRE_75                       |     4|
+|148   |      \S_AXI_RDATA_DFF[12].S_AXI_RDATA_FDRE                             |MB_FDRE_76                       |     4|
+|149   |      \S_AXI_RDATA_DFF[13].S_AXI_RDATA_FDRE                             |MB_FDRE_77                       |     4|
+|150   |      \S_AXI_RDATA_DFF[14].S_AXI_RDATA_FDRE                             |MB_FDRE_78                       |     4|
+|151   |      \S_AXI_RDATA_DFF[15].S_AXI_RDATA_FDRE                             |MB_FDRE_79                       |     4|
+|152   |      \S_AXI_RDATA_DFF[16].S_AXI_RDATA_FDRE                             |MB_FDRE_80                       |     4|
+|153   |      \S_AXI_RDATA_DFF[17].S_AXI_RDATA_FDRE                             |MB_FDRE_81                       |     4|
+|154   |      \S_AXI_RDATA_DFF[18].S_AXI_RDATA_FDRE                             |MB_FDRE_82                       |     4|
+|155   |      \S_AXI_RDATA_DFF[19].S_AXI_RDATA_FDRE                             |MB_FDRE_83                       |     6|
+|156   |      \S_AXI_RDATA_DFF[1].S_AXI_RDATA_FDRE                              |MB_FDRE_84                       |     8|
+|157   |      \S_AXI_RDATA_DFF[20].S_AXI_RDATA_FDRE                             |MB_FDRE_85                       |     3|
+|158   |      \S_AXI_RDATA_DFF[21].S_AXI_RDATA_FDRE                             |MB_FDRE_86                       |     3|
+|159   |      \S_AXI_RDATA_DFF[22].S_AXI_RDATA_FDRE                             |MB_FDRE_87                       |     3|
+|160   |      \S_AXI_RDATA_DFF[23].S_AXI_RDATA_FDRE                             |MB_FDRE_88                       |     3|
+|161   |      \S_AXI_RDATA_DFF[24].S_AXI_RDATA_FDRE                             |MB_FDRE_89                       |     3|
+|162   |      \S_AXI_RDATA_DFF[25].S_AXI_RDATA_FDRE                             |MB_FDRE_90                       |     3|
+|163   |      \S_AXI_RDATA_DFF[26].S_AXI_RDATA_FDRE                             |MB_FDRE_91                       |     3|
+|164   |      \S_AXI_RDATA_DFF[27].S_AXI_RDATA_FDRE                             |MB_FDRE_92                       |     3|
+|165   |      \S_AXI_RDATA_DFF[28].S_AXI_RDATA_FDRE                             |MB_FDRE_93                       |     3|
+|166   |      \S_AXI_RDATA_DFF[29].S_AXI_RDATA_FDRE                             |MB_FDRE_94                       |     3|
+|167   |      \S_AXI_RDATA_DFF[2].S_AXI_RDATA_FDRE                              |MB_FDRE_95                       |     5|
+|168   |      \S_AXI_RDATA_DFF[30].S_AXI_RDATA_FDRE                             |MB_FDRE_96                       |     4|
+|169   |      \S_AXI_RDATA_DFF[31].S_AXI_RDATA_FDRE                             |MB_FDRE_97                       |     8|
+|170   |      \S_AXI_RDATA_DFF[3].S_AXI_RDATA_FDRE                              |MB_FDRE_98                       |     5|
+|171   |      \S_AXI_RDATA_DFF[4].S_AXI_RDATA_FDRE                              |MB_FDRE_99                       |     5|
+|172   |      \S_AXI_RDATA_DFF[5].S_AXI_RDATA_FDRE                              |MB_FDRE_100                      |     5|
+|173   |      \S_AXI_RDATA_DFF[6].S_AXI_RDATA_FDRE                              |MB_FDRE_101                      |     5|
+|174   |      \S_AXI_RDATA_DFF[7].S_AXI_RDATA_FDRE                              |MB_FDRE_102                      |     4|
+|175   |      \S_AXI_RDATA_DFF[8].S_AXI_RDATA_FDRE                              |MB_FDRE_103                      |     4|
+|176   |      \S_AXI_RDATA_DFF[9].S_AXI_RDATA_FDRE                              |MB_FDRE_104                      |     4|
+|177   |    \ECC.checkbit_handler_I1                                            |checkbit_handler                 |   107|
+|178   |      \Decode_Bits.Parity_chk0_1                                        |Parity                           |     1|
+|179   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_73                       |     1|
+|180   |      \Decode_Bits.Parity_chk0_2                                        |Parity_0                         |     1|
+|181   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_72                       |     1|
+|182   |      \Decode_Bits.Parity_chk0_3                                        |Parity_1                         |     1|
+|183   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_71                       |     1|
+|184   |      \Decode_Bits.Parity_chk0_4                                        |ParityEnable                     |     2|
+|185   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6__parameterized1_70       |     2|
+|186   |      \Decode_Bits.Parity_chk1_1                                        |Parity_2                         |     1|
+|187   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_69                       |     1|
+|188   |      \Decode_Bits.Parity_chk1_2                                        |Parity_3                         |     1|
+|189   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_68                       |     1|
+|190   |      \Decode_Bits.Parity_chk1_3                                        |Parity_4                         |     1|
+|191   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_67                       |     1|
+|192   |      \Decode_Bits.Parity_chk1_4                                        |ParityEnable_5                   |    11|
+|193   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6__parameterized1_66       |    11|
+|194   |      \Decode_Bits.Parity_chk2_1                                        |Parity_6                         |     1|
+|195   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_65                       |     1|
+|196   |      \Decode_Bits.Parity_chk2_2                                        |Parity_7                         |     1|
+|197   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_64                       |     1|
+|198   |      \Decode_Bits.Parity_chk2_3                                        |Parity_8                         |     1|
+|199   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_63                       |     1|
+|200   |      \Decode_Bits.Parity_chk2_4                                        |ParityEnable_9                   |     2|
+|201   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6__parameterized1_62       |     2|
+|202   |      \Decode_Bits.Parity_chk3_1                                        |Parity__parameterized2           |     7|
+|203   |        \Using_FPGA.Use_MUXF8.MUXF7_LUT1                                |MB_MUXF7_55                      |     1|
+|204   |        \Using_FPGA.Use_MUXF8.MUXF7_LUT2                                |MB_MUXF7_56                      |     1|
+|205   |        \Using_FPGA.Use_MUXF8.MUXF8_LUT                                 |MB_MUXF8_57                      |     1|
+|206   |        \Using_FPGA.Use_MUXF8.XOR6_LUT1                                 |MB_LUT6_58                       |     1|
+|207   |        \Using_FPGA.Use_MUXF8.XOR6_LUT2_N                               |MB_LUT6__parameterized4_59       |     1|
+|208   |        \Using_FPGA.Use_MUXF8.XOR6_LUT3                                 |MB_LUT6_60                       |     1|
+|209   |        \Using_FPGA.Use_MUXF8.XOR6_LUT4_N                               |MB_LUT6__parameterized4_61       |     1|
+|210   |      \Decode_Bits.Parity_chk3_2                                        |Parity__parameterized2_10        |    14|
+|211   |        \Using_FPGA.Use_MUXF8.MUXF7_LUT1                                |MB_MUXF7_48                      |     1|
+|212   |        \Using_FPGA.Use_MUXF8.MUXF7_LUT2                                |MB_MUXF7_49                      |     1|
+|213   |        \Using_FPGA.Use_MUXF8.MUXF8_LUT                                 |MB_MUXF8_50                      |     8|
+|214   |        \Using_FPGA.Use_MUXF8.XOR6_LUT1                                 |MB_LUT6_51                       |     1|
+|215   |        \Using_FPGA.Use_MUXF8.XOR6_LUT2_N                               |MB_LUT6__parameterized4_52       |     1|
+|216   |        \Using_FPGA.Use_MUXF8.XOR6_LUT3                                 |MB_LUT6_53                       |     1|
+|217   |        \Using_FPGA.Use_MUXF8.XOR6_LUT4_N                               |MB_LUT6__parameterized4_54       |     1|
+|218   |      \Decode_Bits.Parity_chk3_3                                        |ParityEnable__parameterized2     |    16|
+|219   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6__parameterized1          |    16|
+|220   |      \Decode_Bits.Parity_chk4_1                                        |Parity__parameterized2_11        |     8|
+|221   |        \Using_FPGA.Use_MUXF8.MUXF7_LUT1                                |MB_MUXF7_41                      |     1|
+|222   |        \Using_FPGA.Use_MUXF8.MUXF7_LUT2                                |MB_MUXF7_42                      |     1|
+|223   |        \Using_FPGA.Use_MUXF8.MUXF8_LUT                                 |MB_MUXF8_43                      |     2|
+|224   |        \Using_FPGA.Use_MUXF8.XOR6_LUT1                                 |MB_LUT6_44                       |     1|
+|225   |        \Using_FPGA.Use_MUXF8.XOR6_LUT2_N                               |MB_LUT6__parameterized4_45       |     1|
+|226   |        \Using_FPGA.Use_MUXF8.XOR6_LUT3                                 |MB_LUT6_46                       |     1|
+|227   |        \Using_FPGA.Use_MUXF8.XOR6_LUT4_N                               |MB_LUT6__parameterized4_47       |     1|
+|228   |      \Decode_Bits.Parity_chk4_2                                        |Parity__parameterized2_12        |     7|
+|229   |        \Using_FPGA.Use_MUXF8.MUXF7_LUT1                                |MB_MUXF7_35                      |     1|
+|230   |        \Using_FPGA.Use_MUXF8.MUXF7_LUT2                                |MB_MUXF7_36                      |     1|
+|231   |        \Using_FPGA.Use_MUXF8.MUXF8_LUT                                 |MB_MUXF8                         |     1|
+|232   |        \Using_FPGA.Use_MUXF8.XOR6_LUT1                                 |MB_LUT6_37                       |     1|
+|233   |        \Using_FPGA.Use_MUXF8.XOR6_LUT2_N                               |MB_LUT6__parameterized4_38       |     1|
+|234   |        \Using_FPGA.Use_MUXF8.XOR6_LUT3                                 |MB_LUT6_39                       |     1|
+|235   |        \Using_FPGA.Use_MUXF8.XOR6_LUT4_N                               |MB_LUT6__parameterized4_40       |     1|
+|236   |      \Decode_Bits.Parity_chk4_3                                        |Parity__parameterized4           |     3|
+|237   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_34                       |     3|
+|238   |      \Decode_Bits.Parity_chk5_1                                        |Parity__parameterized6           |     8|
+|239   |        \Using_FPGA.Use_MUXF7.MUXF7_LUT                                 |MB_MUXF7_31                      |     6|
+|240   |        \Using_FPGA.Use_MUXF7.XOR6_LUT                                  |MB_LUT6_32                       |     1|
+|241   |        \Using_FPGA.Use_MUXF7.XOR6_LUT_N                                |MB_LUT6__parameterized4_33       |     1|
+|242   |      \Decode_Bits.Parity_chk6_1                                        |Parity_13                        |     1|
+|243   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_30                       |     1|
+|244   |      \Decode_Bits.Parity_chk6_2                                        |Parity_14                        |     1|
+|245   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_29                       |     1|
+|246   |      \Decode_Bits.Parity_chk6_3                                        |Parity_15                        |     1|
+|247   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6_28                       |     1|
+|248   |      \Decode_Bits.Parity_chk6_4                                        |Parity__parameterized6_16        |     3|
+|249   |        \Using_FPGA.Use_MUXF7.MUXF7_LUT                                 |MB_MUXF7_25                      |     1|
+|250   |        \Using_FPGA.Use_MUXF7.XOR6_LUT                                  |MB_LUT6_26                       |     1|
+|251   |        \Using_FPGA.Use_MUXF7.XOR6_LUT_N                                |MB_LUT6__parameterized4_27       |     1|
+|252   |      \Decode_Bits.Parity_chk6_5                                        |Parity__parameterized6_17        |     3|
+|253   |        \Using_FPGA.Use_MUXF7.MUXF7_LUT                                 |MB_MUXF7_22                      |     1|
+|254   |        \Using_FPGA.Use_MUXF7.XOR6_LUT                                  |MB_LUT6_23                       |     1|
+|255   |        \Using_FPGA.Use_MUXF7.XOR6_LUT_N                                |MB_LUT6__parameterized4_24       |     1|
+|256   |      \Decode_Bits.Parity_chk6_6                                        |Parity__parameterized6_18        |     3|
+|257   |        \Using_FPGA.Use_MUXF7.MUXF7_LUT                                 |MB_MUXF7_20                      |     1|
+|258   |        \Using_FPGA.Use_MUXF7.XOR6_LUT                                  |MB_LUT6_21                       |     1|
+|259   |        \Using_FPGA.Use_MUXF7.XOR6_LUT_N                                |MB_LUT6__parameterized4          |     1|
+|260   |      \Decode_Bits.Parity_chk6_7                                        |Parity_19                        |     2|
+|261   |        \Using_FPGA.Single_LUT6.XOR6_LUT                                |MB_LUT6                          |     2|
+|262   |      \Decode_Bits.Use_FPGA.UE_MUXF7                                    |MB_MUXF7                         |     6|
++------+------------------------------------------------------------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 839.344 ; gain = 556.137
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 268 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 839.344 ; gain = 193.234
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 839.344 ; gain = 556.137
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 104 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 38 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 38 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+232 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 839.344 ; gain = 563.578
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/design_1_dlmb_bram_if_cntlr_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0.xci
+INFO: [Coretcl 2-1174] Renamed 261 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/sandbox/vhdl/microblaze_zynq_system/microblaze_zynq_system.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/design_1_dlmb_bram_if_cntlr_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_dlmb_bram_if_cntlr_0_utilization_synth.rpt -pb design_1_dlmb_bram_if_cntlr_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 839.344 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 15 15:44:40 2018...

@@ -1,0 +1,32 @@
+08:17:11 **** Build of configuration Debug for project zedFEmon ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I"C:\sandbox\vhdl\ZedMB_frontEndMon\ZedMB_frontEndMon.sdk\hw_platform_2_bsp\microblaze_0\include" -c -fmessage-length=0 -MT"src/helloworld.o" -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:125:6: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+      usleep(1000000);
+      ^~~~~~
+      fseek
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I"C:\sandbox\vhdl\ZedMB_frontEndMon\ZedMB_frontEndMon.sdk\hw_platform_2_bsp\microblaze_0\include" -c -fmessage-length=0 -MT"src/platform.o" -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: zedFEmon.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedFEmon_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedFEmon.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/lib/bs/m/mh/le\libxil.a(print.o): In function `print':
+(.text+0x20): undefined reference to `outbyte'
+./src/helloworld.o: In function `main':
+C:\sandbox\vhdl\ZedMB_frontEndMon\ZedMB_frontEndMon.sdk\zedFEmon\Debug/../src/helloworld.c:125: undefined reference to `usleep'
+./src/platform.o: In function `enable_caches':
+C:\sandbox\vhdl\ZedMB_frontEndMon\ZedMB_frontEndMon.sdk\zedFEmon\Debug/../src/platform.c:79: undefined reference to `microblaze_enable_icache'
+C:\sandbox\vhdl\ZedMB_frontEndMon\ZedMB_frontEndMon.sdk\zedFEmon\Debug/../src/platform.c:79: undefined reference to `microblaze_enable_dcache'
+collect2.exe: error: ld returned 1 exit status
+make: *** [zedFEmon.elf] Error 1
+
+08:17:12 Build Finished (took 637ms)
+

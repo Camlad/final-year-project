@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Jun 22 12:22:37 2022
+# Process ID: 19728
+# Current directory: C:/dataSandbox/Zedboard/GNSS_RX_ZedMB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15732 C:\dataSandbox\Zedboard\GNSS_RX_ZedMB\GNSS_RX_ZedMB.xpr
+# Log file: C:/dataSandbox/Zedboard/GNSS_RX_ZedMB/vivado.log
+# Journal file: C:/dataSandbox/Zedboard/GNSS_RX_ZedMB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/dataSandbox/Zedboard/GNSS_RX_ZedMB/GNSS_RX_ZedMB.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+write_hwdef -force  -file C:/dataSandbox/Zedboard/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sdk/ZedMB_top.hdf
+launch_sdk -workspace C:/dataSandbox/Zedboard/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sdk -hwspec C:/dataSandbox/Zedboard/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sdk/ZedMB_top.hdf

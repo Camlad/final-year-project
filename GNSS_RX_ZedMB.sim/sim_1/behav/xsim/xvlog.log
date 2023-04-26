@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/dataSandbox/Zedboard/GNSS_RX_ZedMB_runningVersionPreRebuild/GNSS_RX_ZedMB/GNSS_RX_ZedMB.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/dataSandbox/Zedboard/GNSS_RX_ZedMB_runningVersionPreRebuild/GNSS_RX_ZedMB/GNSS_RX_ZedMB.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/dataSandbox/Zedboard/GNSS_RX_ZedMB_runningVersionPreRebuild/GNSS_RX_ZedMB/GNSS_RX_ZedMB.ip_user_files/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/sim/design_1_microblaze_0_xlconcat_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_microblaze_0_xlconcat_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/dataSandbox/Zedboard/GNSS_RX_ZedMB_runningVersionPreRebuild/GNSS_RX_ZedMB/GNSS_RX_ZedMB.ip_user_files/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/dataSandbox/Zedboard/GNSS_RX_ZedMB_runningVersionPreRebuild/GNSS_RX_ZedMB/GNSS_RX_ZedMB.ip_user_files/bd/design_1/ip/design_1_lmb_bram_0/sim/design_1_lmb_bram_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_lmb_bram_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/dataSandbox/Zedboard/GNSS_RX_ZedMB_runningVersionPreRebuild/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

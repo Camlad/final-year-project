@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;frontEndMon/src/FrontEndMon.c&apos; to &apos;frontEndMon.c&apos;" description="Rename resource &apos;FrontEndMon.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/FrontEndMon.c" name="frontEndMon.c" stamp="1542316574637" updateReferences="true"/>
+</session>

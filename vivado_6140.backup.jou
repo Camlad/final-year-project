@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Jun 21 23:41:56 2022
+# Process ID: 6140
+# Current directory: C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18952 C:\Users\paulb\OneDrive - The University of Nottingham\sandbox\GNSS_RX_ZedMB\GNSS_RX_ZedMB.xpr
+# Log file: C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB/vivado.log
+# Journal file: C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB/GNSS_RX_ZedMB.xpr}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB/GNSS_RX_ZedMB.srcs/sources_1/bd/design_1/design_1.bd}
+launch_sdk -workspace {C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sdk} -hwspec {C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sdk/ZedMB_top.hdf}
+launch_sdk -workspace {C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sdk} -hwspec {C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sdk/ZedMB_top.hdf}
+launch_sdk -workspace {C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sdk} -hwspec {C:/Users/paulb/OneDrive - The University of Nottingham/sandbox/GNSS_RX_ZedMB/GNSS_RX_ZedMB.sdk/ZedMB_top.hdf}

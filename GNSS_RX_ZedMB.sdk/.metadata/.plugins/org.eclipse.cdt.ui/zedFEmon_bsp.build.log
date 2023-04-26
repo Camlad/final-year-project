@@ -1,0 +1,15 @@
+08:07:40 **** Auto Build of project zedFEmon_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+cp: target `../../../include' is not a directory
+make[1]: *** [standalone_includes] Error 1
+cp: target `../../../../include' is not a directory
+make[2]: *** [include] Error 1
+make[1]: *** [profile_includes] Error 2
+make[1]: Target `include' not remade because of errors.
+make: *** [microblaze_0/libsrc/standalone_v6_7/src/make.include] Error 2
+make: Target `all' not remade because of errors.
+
+08:07:40 Build Finished (took 300ms)
+

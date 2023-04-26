@@ -1,0 +1,155 @@
+/*
+ * spi.c
+ *
+ *  Created on: 21 Nov 2018
+ *      Author: Anyone
+ */
+#include "defines.h"
+#include "FreeRTOS.h"
+#include "timers.h"
+#include "xil_io.h"
+#include "xspi_l.h"		/* SPI device driver */
+#include "spi.h"
+#include "NT1065.h"
+#include "xspi.h"
+
+#define BUFFER_SIZE 44UL
+uint8_t ReadBuffer[BUFFER_SIZE];
+uint8_t WriteBuffer[BUFFER_SIZE];
+
+void spiTask( void *pvParameters )
+{
+	const TickType_t x1second = pdMS_TO_TICKS( DELAY_1_SECOND );
+	uint8_t outReg = 0x80;
+	uint8_t inReg[2];
+	uint32_t Count;
+	XSpi mySPI;
+	XSpi *SpiInstancePtr;
+	XSpi_Config *ConfigPtr;
+	XStatus Status = XST_SUCCESS;
+	uint32_t options = XSP_MASTER_OPTION;
+	uint8_t Test;
+
+	/*
+	 * Initialize the SPI driver so that it is  ready to use.
+	 */
+//	SpiInstancePtr = &mySPI;
+//	ConfigPtr = XSpi_LookupConfig(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
+//	if (ConfigPtr == NULL) {
+//		return XST_DEVICE_NOT_FOUND;
+//	}
+//
+//	Status = XSpi_CfgInitialize(SpiInstancePtr, ConfigPtr,
+//				  ConfigPtr->BaseAddress);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//
+//	/*
+//	 * Perform a self-test to ensure that the hardware was built correctly.
+//	 */
+//	Status = XSpi_SelfTest(SpiInstancePtr);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//
+//	/*
+//	 * Run loopback test only in case of standard SPI mode.
+//	 */
+//	if (SpiInstancePtr->SpiMode != XSP_STANDARD_MODE) {
+//		return XST_SUCCESS;
+//	}
+//
+//	/*
+//	 * Set the Spi device as a master
+//	 */
+//	Status = XSpi_SetOptions(SpiInstancePtr, XSP_MASTER_OPTION);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//
+//
+//	/*
+//	 * Start the SPI driver so that the device is enabled.
+//	 */
+//	XSpi_Start(SpiInstancePtr);
+//
+//	/*
+//	 * Disable Global interrupt to use polled mode operation
+//	 */
+//	XSpi_IntrGlobalDisable(SpiInstancePtr);
+//	for( ;; )
+//	{
+//		/* Delay for 1 second. */
+//		vTaskDelay( x1second );
+//		/*
+//		 * Initialize the write buffer with pattern to write, initialize the
+//		 * read buffer to zero so it can be verified after the read, the
+//		 * Test value that is added to the unique value allows the value to be
+//		 * changed in a debug environment.
+//		 */
+//		Test = 0x80;
+//		for (Count = 0; Count < BUFFER_SIZE; Count++) {
+//			WriteBuffer[Count] = (u8)(Count + Test);
+//			ReadBuffer[Count] = 0;
+//			/*
+//			 * Transmit the data.
+//			 */
+//
+//			XSpi_Transfer(SpiInstancePtr, &WriteBuffer[Count], &ReadBuffer[Count], 1);
+//		}
+//
+//
+//
+//
+//
+//		/*
+//		 * Print all the data received from the master so that it can be
+//		 * compared with the data sent by the master.
+//		 */
+//		xil_printf("\r\nReceived data is:\r\n");
+//		for (Count = 0; Count < BUFFER_SIZE; Count++) {
+//			xil_printf("0x%x \r\n", ReadBuffer[Count]);
+//		}
+//	}
+
+
+
+	Status = XSpi_Initialize(&mySPI, XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
+	xil_printf("status = %d \r\n", Status);
+	XSpi_SetOptions(&mySPI, options);
+	Status = XSpi_SetSlaveSelect(&mySPI, 1);
+	xil_printf("status = %d \r\n", Status);
+
+	Status = XSpi_Start(&mySPI);
+	XSpi_IntrGlobalDisable(&mySPI);
+	xil_printf("status = %d \r\n", Status);
+
+
+	for( ;; )
+	{
+		/* Delay for 1 second. */
+		vTaskDelay( x1second );
+
+		// read the spi data
+		for(int i = 0; i < BUFFER_SIZE; i++)
+		{
+			//XSpi_IntrGlobalEnable(&mySPI);
+
+			Status = XSpi_Transfer(&mySPI, &outReg, &inReg, 2);
+			xil_printf("SPI task reg0 = %x \r\n", inReg[1]);
+			xil_printf("status = %d \r\n", Status);
+			//XSpi_IntrGlobalDisable(&mySPI);
+			//Status = XSpi_SetSlaveSelect(&mySPI, 0);
+			//xil_printf("status = %d \r\n", Status);
+			outReg = outReg + 1;
+		}
+		outReg = 0x80;
+//		for(int i = 0; i < BUFFER_SIZE; i++)
+//		{
+//			XSpi_Transfer(&mySPI, outReg + i, inReg, 2);
+//			xil_printf("SPI task reg0 = %d \r\n", inReg);
+//		}
+
+	}
+}

@@ -1,0 +1,18 @@
+$date
+        2022-Jul-05 14:28:23
+$end
+$version
+        Vivado v2018.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " SCS_b_out_OBUF $end
+$var reg 1 # SMISO_b_in_IBUF $end
+$var reg 1 $ SMOSI_b_out_OBUF $end
+$var reg 1 % _TRIGGER $end
+$var reg 1 & _WINDOW $end
+$var reg 1 ' _GAP $end
+$upscope $end
+$enddefinitions $end

@@ -1,0 +1,27 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/sim/design_1.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_microblaze_0_0/sim/design_1_microblaze_0_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/sim/design_1_microblaze_0_axi_intc_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_mdm_1_0/sim/design_1_mdm_1_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_rst_clk_wiz_0_100M_0/sim/design_1_rst_clk_wiz_0_100M_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_axi_gpio_0_0/sim/design_1_axi_gpio_0_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_dlmb_v10_0/sim/design_1_dlmb_v10_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_ilmb_v10_0/sim/design_1_ilmb_v10_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/sim/design_1_dlmb_bram_if_cntlr_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/sim/design_1_ilmb_bram_if_cntlr_0.vhd" \
+"../../../../../microblaze_zynq_system/microblaze_zynq_system.srcs/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/sim/design_1_c_counter_binary_0_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ipshared/4162/sources_1/imports/sandbox/receiverConfigurationPackage.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ipshared/4162/sources_1/new/ROM_CA.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ipshared/4162/sources_1/new/ROM_E1B.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ipshared/4162/sources_1/new/ROM_E5a_I.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ipshared/4162/sources_1/imports/sandbox/noiseCorrelator.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ipshared/4162/sources_1/imports/sandbox/frontEndMonitor.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ipshared/4162/sources_1/new/frontEndMonitorIP_v1_0_S_AXI.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ipshared/4162/sources_1/new/frontEndMonitorIP_v1_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_frontEndMonitorIP_v1_0_0/sim/design_1_frontEndMonitorIP_v1_0_0.vhd" \
+"../../../../ZedMB_frontEndMon.ip_user_files/bd/design_1/ip/design_1_axi_quad_spi_0_0/sim/design_1_axi_quad_spi_0_0.vhd" \
+"../../../../ZedMB_frontEndMon.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

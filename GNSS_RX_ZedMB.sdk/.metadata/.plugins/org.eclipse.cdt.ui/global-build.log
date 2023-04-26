@@ -1,0 +1,659 @@
+21:15:23 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+21:15:37 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'getFrontEndMonitorValues':
+../src/frontEndMonitor.c:95:30: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   if (mag > upperCoarseLimit && coarseAGC[frontEnd] > 0 || fineAGC[frontEnd] <= 7)
+       ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/frontEndMonitor.c:100:35: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   else if (mag < lowerCoarseLimit && coarseAGC[frontEnd] < 23 || fineAGC[frontEnd] >= 26)
+            ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:16:43 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'getFrontEndMonitorValues':
+../src/frontEndMonitor.c:95:32: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   if ((mag > upperCoarseLimit) && (coarseAGC[frontEnd] > 0) || (fineAGC[frontEnd] <= 7))
+       ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/frontEndMonitor.c:100:37: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   else if ((mag < lowerCoarseLimit) && (coarseAGC[frontEnd] < 23) || (fineAGC[frontEnd] >= 26))
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:17:19 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'getFrontEndMonitorValues':
+../src/frontEndMonitor.c:100:37: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   else if ((mag < lowerCoarseLimit) && (coarseAGC[frontEnd] < 23) || (fineAGC[frontEnd] >= 26))
+            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:17:29 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:25:10 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'init_Uart':
+../src/frontEndMonitor.c:88:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+../src/frontEndMonitor.c:87:15: warning: unused variable 'ReceivedCount' [-Wunused-variable]
+  unsigned int ReceivedCount = 0;
+               ^~~~~~~~~~~~~
+../src/frontEndMonitor.c:86:15: warning: unused variable 'SentCount' [-Wunused-variable]
+  unsigned int SentCount;
+               ^~~~~~~~~
+In file included from ../../zedMBfreeRTOS_bsp/microblaze_0/include/xgpio.h:135:0,
+                 from ../src/frontEndMonitor.c:14:
+../src/frontEndMonitor.c: In function 'frontEndMonTask':
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/frontEndMonitor.c:265:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/frontEndMonitor.c:248:6: note: declared here
+ void frontEndMonTask( void *pvParameters )
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:25:30 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'init_Uart':
+../src/frontEndMonitor.c:90:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Status'
+  Status = XUartLite_Initialize(&UartLite, DeviceId);
+  ^~~~~~
+../src/frontEndMonitor.c:90:2: error: 'Status' undeclared (first use in this function); did you mean 'XStatus'?
+  Status = XUartLite_Initialize(&UartLite, DeviceId);
+  ^~~~~~
+  XStatus
+../src/frontEndMonitor.c:90:2: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../zedMBfreeRTOS_bsp/microblaze_0/include/xgpio.h:135:0,
+                 from ../src/frontEndMonitor.c:14:
+../src/frontEndMonitor.c: In function 'frontEndMonTask':
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/frontEndMonitor.c:262:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/frontEndMonitor.c:245:6: note: declared here
+ void frontEndMonTask( void *pvParameters )
+      ^~~~~~~~~~~~~~~
+make: *** [src/frontEndMonitor.o] Error 1
+21:25:41 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+In file included from ../../zedMBfreeRTOS_bsp/microblaze_0/include/xgpio.h:135:0,
+                 from ../src/frontEndMonitor.c:14:
+../src/frontEndMonitor.c: In function 'frontEndMonTask':
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/frontEndMonitor.c:262:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/frontEndMonitor.c:245:6: note: declared here
+ void frontEndMonTask( void *pvParameters )
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:29:34 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:35:28 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'frontEndMonTask':
+../src/frontEndMonitor.c:290:3: error: 'SentCount' undeclared (first use in this function)
+   SentCount = XUartLite_Send(&UartLite, SendBuffer, TEST_BUFFER_SIZE);
+   ^~~~~~~~~
+../src/frontEndMonitor.c:290:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/frontEndMonitor.c:290:41: warning: passing argument 2 of 'XUartLite_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+   SentCount = XUartLite_Send(&UartLite, SendBuffer, TEST_BUFFER_SIZE);
+                                         ^~~~~~~~~~
+In file included from ../src/frontEndMonitor.c:17:0:
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xuartlite.h:256:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int32_t * {aka long int *}'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+In file included from ../../zedMBfreeRTOS_bsp/microblaze_0/include/xgpio.h:135:0,
+                 from ../src/frontEndMonitor.c:14:
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/frontEndMonitor.c:292:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/frontEndMonitor.c:245:6: note: declared here
+ void frontEndMonTask( void *pvParameters )
+      ^~~~~~~~~~~~~~~
+make: *** [src/frontEndMonitor.o] Error 1
+21:36:08 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'frontEndMonTask':
+../src/frontEndMonitor.c:291:41: warning: passing argument 2 of 'XUartLite_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+   SentCount = XUartLite_Send(&UartLite, SendBuffer, TEST_BUFFER_SIZE);
+                                         ^~~~~~~~~~
+In file included from ../src/frontEndMonitor.c:17:0:
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xuartlite.h:256:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int32_t * {aka long int *}'
+ unsigned int XUartLite_Send(XUartLite *InstancePtr, u8 *DataBufferPtr,
+              ^~~~~~~~~~~~~~
+In file included from ../../zedMBfreeRTOS_bsp/microblaze_0/include/xgpio.h:135:0,
+                 from ../src/frontEndMonitor.c:14:
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/frontEndMonitor.c:293:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/frontEndMonitor.c:245:6: note: declared here
+ void frontEndMonTask( void *pvParameters )
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:37:11 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+In file included from ../../zedMBfreeRTOS_bsp/microblaze_0/include/xgpio.h:135:0,
+                 from ../src/frontEndMonitor.c:14:
+../src/frontEndMonitor.c: In function 'frontEndMonTask':
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/frontEndMonitor.c:293:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/frontEndMonitor.c:245:6: note: declared here
+ void frontEndMonTask( void *pvParameters )
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:37:57 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+21:38:40 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41832	   1500	  69572	 112904	  1b908	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+09:33:18 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+09:34:29 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+09:37:14 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+09:37:58 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/RT_main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/RT_main.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/RT_main.d" -MT"src/RT_main.o" -o "src/RT_main.o" "../src/RT_main.c"
+'Finished building: ../src/RT_main.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  49092	   1548	  69736	 120376	  1d638	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+09:38:05 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+09:39:56 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  47840	   1548	  69732	 119120	  1d150	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+09:40:32 **** Incremental Build of configuration Debug for project freertos10_xilinx_bsp_0_xuartlite_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+09:41:20 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+09:45:13 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'frontEndMonTask':
+../src/frontEndMonitor.c:291:8: error: 'Index' undeclared (first use in this function); did you mean 'index'?
+   for (Index = 0; Index < TEST_BUFFER_SIZE; Index++) {
+        ^~~~~
+        index
+../src/frontEndMonitor.c:291:8: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/frontEndMonitor.o] Error 1
+09:45:48 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  46804	   1548	  69760	 118112	  1cd60	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+09:45:57 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+10:20:08 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+10:21:45 **** Incremental Build of configuration Debug for project freertos10_xilinx_bsp_0_xuartlite_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:22:22 **** Incremental Build of configuration Debug for project freertos10_xilinx_bsp_0_xuartlite_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:23:11 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+10:25:28 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  48800	   1548	  69756	 120104	  1d528	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+10:25:34 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+10:31:33 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  46804	   1548	  69760	 118112	  1cd60	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+10:31:41 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+10:32:57 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+10:34:59 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c:227:2: error: expected identifier or '(' before 'if'
+  if ((int_type & 0x0001) != 0)
+  ^~
+../src/frontEndMonitor.c:232:2: error: expected identifier or '(' before 'if'
+  if ((int_type & 0x0002) != 0)
+  ^~
+../src/frontEndMonitor.c:237:2: error: expected identifier or '(' before 'if'
+  if ((int_type & 0x0004) != 0)
+  ^~
+../src/frontEndMonitor.c:243:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+../src/frontEndMonitor.c:244:2: error: expected identifier or '(' before '/' token
+ */
+  ^
+make: *** [src/frontEndMonitor.o] Error 1
+10:35:34 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  46804	   1548	  69760	 118112	  1cd60	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+10:35:40 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+10:36:32 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  46804	   1548	  69760	 118112	  1cd60	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+10:36:42 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+10:38:41 **** Auto Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/spi.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/spi.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/spi.d" -MT"src/spi.o" -o "src/spi.o" "../src/spi.c"
+../src/spi.c: In function 'readNT1065Config_allRegsTransfer':
+../src/spi.c:175:32: warning: passing argument 2 of 'XSpi_Transfer' from incompatible pointer type [-Wincompatible-pointer-types]
+  XSpi_Transfer(SpiInstancePtr, &NT1065_regsAddrAll, &NT1065_readBuff, 2*BUFFER_SIZE);
+                                ^
+In file included from ../src/spi.h:11:0,
+                 from ../src/spi.c:12:
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xspi.h:826:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'uint16_t (*)[49] {aka short unsigned int (*)[49]}'
+ int XSpi_Transfer(XSpi *InstancePtr, u8 *SendBufPtr, u8 *RecvBufPtr,
+     ^~~~~~~~~~~~~
+../src/spi.c:175:53: warning: passing argument 3 of 'XSpi_Transfer' from incompatible pointer type [-Wincompatible-pointer-types]
+  XSpi_Transfer(SpiInstancePtr, &NT1065_regsAddrAll, &NT1065_readBuff, 2*BUFFER_SIZE);
+                                                     ^
+In file included from ../src/spi.h:11:0,
+                 from ../src/spi.c:12:
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xspi.h:826:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'uint16_t (*)[49] {aka short unsigned int (*)[49]}'
+ int XSpi_Transfer(XSpi *InstancePtr, u8 *SendBufPtr, u8 *RecvBufPtr,
+     ^~~~~~~~~~~~~
+../src/spi.c: In function 'writeNT1065Config2':
+../src/spi.c:195:32: warning: passing argument 2 of 'XSpi_Transfer' from incompatible pointer type [-Wincompatible-pointer-types]
+  XSpi_Transfer(SpiInstancePtr, &NT1065_writeRegs, NULL, 2*REG_CONF2);
+                                ^
+In file included from ../src/spi.h:11:0,
+                 from ../src/spi.c:12:
+../../zedMBfreeRTOS_bsp/microblaze_0/include/xspi.h:826:5: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'uint16_t (*)[49] {aka short unsigned int (*)[49]}'
+ int XSpi_Transfer(XSpi *InstancePtr, u8 *SendBufPtr, u8 *RecvBufPtr,
+     ^~~~~~~~~~~~~
+'Finished building: ../src/spi.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  46812	   1548	  69760	 118120	  1cd68	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+10:38:50 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+10:40:37 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'frontEndMonTask':
+../src/frontEndMonitor.c:250:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  47848	   1548	  69756	 119152	  1d170	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+10:41:39 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+'Building file: ../src/frontEndMonitor.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frontEndMonitor.o" -I../../zedMBfreeRTOS_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/frontEndMonitor.d" -MT"src/frontEndMonitor.o" -o "src/frontEndMonitor.o" "../src/frontEndMonitor.c"
+../src/frontEndMonitor.c: In function 'frontEndMonTask':
+../src/frontEndMonitor.c:250:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+'Finished building: ../src/frontEndMonitor.c'
+' '
+'Building target: zedMBfreeRTOS.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../zedMBfreeRTOS_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v10.0 -mno-xl-soft-mul -mxl-multiply-high -Wl,--no-relax -Wl,--gc-sections -o "zedMBfreeRTOS.elf"  ./src/RT_main.o ./src/frontEndMonitor.o ./src/platform.o ./src/spi.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: zedMBfreeRTOS.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size zedMBfreeRTOS.elf  |tee "zedMBfreeRTOS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  47848	   1548	  69756	 119152	  1d170	zedMBfreeRTOS.elf
+'Finished building: zedMBfreeRTOS.elf.size'
+' '
+10:51:14 **** Incremental Build of configuration Debug for project freertos10_xilinx_bsp_0_xuartlite_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:56:53 **** Incremental Build of configuration Debug for project freertos10_xilinx_bsp_0_xuartlite_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:58:03 **** Incremental Build of configuration Debug for project freertos10_xilinx_bsp_0_xuartlite_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+10:58:35 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.
+11:07:43 **** Incremental Build of configuration Debug for project freertos10_xilinx_bsp_0_xuartlite_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:17:53 **** Incremental Build of configuration Debug for project freertos10_xilinx_bsp_0_xuartlite_polled_example_1 ****
+make all 
+make: Nothing to be done for `all'.
+11:20:52 **** Incremental Build of configuration Debug for project zedMBfreeRTOS ****
+make all 
+make: Nothing to be done for `all'.

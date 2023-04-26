@@ -1,0 +1,210 @@
+/*
+ * spi.c
+ *
+ *  Created on: 21 Nov 2018
+ *      Author: Anyone
+ */
+#include "defines.h"
+#include "FreeRTOS.h"
+#include "timers.h"
+#include "xil_io.h"
+#include "xspi_l.h"		/* SPI device driver */
+#include "spi.h"
+#include "NT1065.h"
+#include "xspi.h"
+
+#define BUFFER_SIZE 49UL
+uint8_t ReadBuffer[BUFFER_SIZE];
+uint8_t WriteBuffer[BUFFER_SIZE];
+
+void readNT1065Config_singleRegTransfer(XSpi *SpiInstancePtr, uint8_t *NT1065_regsAllPtr);
+void readNT1065Config_allRegsTransfer(XSpi *SpiInstancePtr, uint8_t *NT1065_regsAllPtr);
+void writeNT1065Config2(XSpi *SpiInstancePtr);
+
+// NT1065 config 2 values
+const uint8_t NT_Config2[REG_CONF2][2] = {
+		{R2	, 0x3},
+		{R3	, 0x1},
+		{R4	, 0x3},
+		{R5	, 0x0},
+		{R6	, 0x1D},
+		{R11	, 0x8},
+		{R12	, 0x0F},
+		{R13	, 0x3},
+		{R14	, 0x54},
+		{R15	, 0x0B},
+		{R16	, 0x34},
+		{R17	, 0xF1},
+		{R18	, 0xEA},
+		{R19	, 0x0B},
+		{R20	, 0x1},
+		{R21	, 0x26},
+		{R22	, 0x0B},
+		{R23	, 0x34},
+		{R24	, 0xF1},
+		{R25	, 0xEA},
+		{R26	, 0x0B},
+		{R27	, 0x1},
+		{R28	, 0x4A},
+		{R29	, 0x0B},
+		{R30	, 0x34},
+		{R31	, 0xF1},
+		{R32	, 0xEA},
+		{R33	, 0x0B},
+		{R34	, 0x3},
+		{R35	, 0x3E},
+		{R36	, 0x0B},
+		{R37	, 0x34},
+		{R38	, 0xF1},
+		{R39	, 0xEA},
+		{R40	, 0x0B},
+		{R41	, 0x3},
+		{R42	, 0x4F},
+		{R43	, 0x89},
+		{R45	, 0x1},
+		{R46	, 0x77},
+		{R47	, 0x11}
+};
+
+void spiTask( void *pvParameters )
+{
+	const TickType_t x1second = pdMS_TO_TICKS(DELAY_1_SECOND);
+	uint8_t outReg = 0x80;
+	uint16_t writeTest = 0x3005;
+	uint8_t inReg[2];
+	uint8_t NT1065_readRegs_singleByteTrans[BUFFER_SIZE];
+	uint8_t NT1065_readRegs[BUFFER_SIZE];
+	uint16_t NT1065_readBuff[BUFFER_SIZE];
+	uint16_t NT1065_writeRegs[BUFFER_SIZE];
+	uint16_t NT1065_regsAll[BUFFER_SIZE];
+	uint32_t Count;
+	XSpi mySPI;
+	XSpi *SpiInstancePtr;
+	XSpi_Config *ConfigPtr;
+	XStatus Status = XST_SUCCESS;
+	uint32_t options = XSP_MASTER_OPTION;
+	uint8_t Test;
+
+	/*
+	 * Initialize the SPI driver so that it is  ready to use.
+	 */
+	SpiInstancePtr = &mySPI;
+	ConfigPtr = XSpi_LookupConfig(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
+	if (ConfigPtr == NULL) {
+		xil_printf("SPI device not found, status code = %d \r\n", XST_DEVICE_NOT_FOUND);
+	}
+
+	Status = XSpi_CfgInitialize(SpiInstancePtr, ConfigPtr,
+				  ConfigPtr->BaseAddress);
+	if (Status != XST_SUCCESS) {
+		xil_printf("SPI initialisation failed, status code = %d \r\n", XST_FAILURE);
+	}
+
+	/*
+	 * Perform a self-test to ensure that the hardware was built correctly.
+	 */
+	Status = XSpi_SelfTest(SpiInstancePtr);
+	if (Status != XST_SUCCESS) {
+		xil_printf("SPI self test failed, status code = %d \r\n", XST_FAILURE);
+	}
+
+	/*
+	 * Set the Spi device (controller in FPGA) as a master
+	 */
+	Status = XSpi_SetOptions(SpiInstancePtr, XSP_MASTER_OPTION);
+	if (Status != XST_SUCCESS) {
+		xil_printf("SPI option configuration failed, status code = %d \r\n", XST_FAILURE);
+	}
+	/*
+	 * Set the Spi device as a master
+	 */
+	XSpi_SetSlaveSelect(SpiInstancePtr, 1);
+
+	/*
+	 * Start the SPI driver so that the device is enabled.
+	 */
+	XSpi_Start(SpiInstancePtr);
+
+	/*
+	 * Disable Global interrupt to use polled mode operation
+	 */
+	XSpi_IntrGlobalDisable(SpiInstancePtr);
+
+
+	for( ;; )
+	{
+		readNT1065Config_singleRegTransfer(SpiInstancePtr, &NT1065_readRegs[0]);
+
+		readNT1065Config_allRegsTransfer(SpiInstancePtr, &NT1065_readRegs[0]);
+
+		writeNT1065Config2(SpiInstancePtr);
+
+		// read the spi data in one transfer
+		readNT1065Config_allRegsTransfer(SpiInstancePtr, &NT1065_readRegs[0]);
+
+		/* check read configuration against config 2 write registers */
+		for(int i = 0; i < REG_CONF2; i++)
+		{
+			if ((NT1065_readRegs[NT_Config2[i][0]]^NT_Config2[i][1]) != 0)
+			{
+				xil_printf("Config 2 difference, reg%d, read Value = 0x%x, config 2 Value = 0x%x \r\n",NT_Config2[i][0], NT1065_readRegs[NT_Config2[i][0]], NT_Config2[i][1] );
+			}
+		}
+
+		/* Delay for 1 second. */
+		vTaskDelay( x1second );
+
+	}
+}
+
+void readNT1065Config_singleRegTransfer(XSpi *SpiInstancePtr, uint8_t *NT1065_regsAllPtr)
+{
+	/* register address with read bit set (MSB) */
+	uint8_t regAddr = 0x80;
+	uint8_t inReg[2];
+	/* read the spi data single bytes transfers */
+	for(int i = 0; i < BUFFER_SIZE; i++)
+	{
+		XSpi_Transfer(SpiInstancePtr, &regAddr, &inReg[0], 2);
+		//xil_printf("SPI task reg%d = 0x%x \r\n", regAddr & 0x7F, inReg[1]);
+		NT1065_regsAllPtr[i] = inReg[1];
+		regAddr = regAddr + 1;
+	}
+}
+
+void readNT1065Config_allRegsTransfer(XSpi *SpiInstancePtr, uint8_t *NT1065_regsAllPtr)
+{
+	/* register address with read bit set (MSB) */
+	uint8_t regAddr = 0x80;
+	uint16_t NT1065_regsAddrAll[BUFFER_SIZE];
+	uint16_t NT1065_readBuff[BUFFER_SIZE];
+
+	// read the spi data single bytes transfers
+	for(int i = 0; i < BUFFER_SIZE; i++)
+	{
+		NT1065_regsAddrAll[i] = (regAddr << 8) + regAddr;
+		regAddr = regAddr + 1;
+	}
+	/* read the spi data in one transfer */
+	XSpi_Transfer(SpiInstancePtr, &NT1065_regsAddrAll, &NT1065_readBuff, 2*BUFFER_SIZE);
+
+	for(int i = 0; i < BUFFER_SIZE; i++)
+	{
+		NT1065_regsAllPtr[i] = (uint8_t)(NT1065_readBuff[i]>>8);
+
+	}
+}
+
+void writeNT1065Config2(XSpi *SpiInstancePtr)
+{
+	uint16_t NT1065_writeRegs[BUFFER_SIZE];
+
+	/* Form the write registers to config 2 */
+	for(int i = 0; i < REG_CONF2; i++)
+	{
+		NT1065_writeRegs[i] = (NT_Config2[i][1] << 8) + NT_Config2[i][0];
+	}
+
+	// write spi data in one transfer
+	XSpi_Transfer(SpiInstancePtr, &NT1065_writeRegs, NULL, 2*REG_CONF2);
+}

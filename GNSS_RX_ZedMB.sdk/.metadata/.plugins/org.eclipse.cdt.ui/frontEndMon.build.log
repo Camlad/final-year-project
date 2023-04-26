@@ -1,0 +1,6 @@
+08:05:58 **** Auto Build of configuration Debug for project frontEndMon ****
+make all 
+make: *** No rule to make target `frontEnd.o', needed by `frontEndMon.elf'.  Stop.
+
+08:05:58 Build Finished (took 159ms)
+
