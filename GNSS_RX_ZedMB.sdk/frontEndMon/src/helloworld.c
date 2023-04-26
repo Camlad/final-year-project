@@ -50,6 +50,9 @@
 #include "xil_printf.h"
 #include "xil_io.h"
 
+#define _BSD_SOURCE
+#include "unistd.h"
+
 #include "xparameters.h"
 #include "xgpio.h"
 

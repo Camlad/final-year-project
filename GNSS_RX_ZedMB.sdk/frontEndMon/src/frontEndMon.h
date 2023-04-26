@@ -35,7 +35,7 @@
 /**
  * \brief Structure for storing ADC data from correlator
  */
-typedef struct sFrontEndMonStruct
+typedef struct tsFrontEndMonStruct
 {
 	volatile uint32_t ADCplus1Count;
 	volatile uint32_t ADCplus3Count;
