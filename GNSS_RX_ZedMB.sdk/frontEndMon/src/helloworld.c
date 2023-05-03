@@ -50,6 +50,13 @@
 #include "xil_printf.h"
 #include "xil_io.h"
 
+/* Included for use of message queues*/
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+
+/* Included to allow the function "usleep" to work*/
 #define _BSD_SOURCE
 #include "unistd.h"
 
@@ -57,12 +64,24 @@
 #include "xgpio.h"
 
 #include "frontEndMon.h"
-
 /**
  * \brief Used to monitor the ADC in the correlator
  */
 tsFrontEndMonStruct frontEndMon[NUM_FE_INPUTS];
 
+/* Task declarations */
+void retrieveFrontEndData(void *pvParameters);
+void calculateDistribution(void *pvParameters);
+void Comms(void *pvParameters);
+
+/* Timer declaration */
+void timerCallback(TimerHandle_t xTimer);
+
+/* GPIO declaration */
+void gpioTask(void *pvParameters);
+
+/*Declare xQueue */
+QueueHandle_t xQueue;
 
 void init_frontEnd(tsFrontEndMonStruct * frontEndTelemetry)
 {
@@ -80,73 +99,171 @@ void init_frontEnd(tsFrontEndMonStruct * frontEndTelemetry)
 	}
 }
 
-
-void getFrontEndMonitorValues(tsFrontEndMonStruct * frontEndTelemetry)
+void retrieveFrontEndData(void *pvParameters)
 {
-	tsFrontEndMonStruct tempADCData;
-	float totalCount = 0;
-	float totalSig = 0.0;
-	uint8_t frontEnd;
+    uint8_t frontEnd;
+    tsFrontEndMonStruct tempADCData;
 
-	for(frontEnd = 0; frontEnd < NUM_FE_INPUTS; frontEnd++)
-	{
-		 tempADCData.ADCminus3Count = Xil_In32(XPAR_FRONTENDMONITORIP_V1_0_BASEADDR + frontEnd * NUM_FE_LEVELS + ADC_MINUS_3);
-		 tempADCData.ADCminus1Count = Xil_In32(XPAR_FRONTENDMONITORIP_V1_0_BASEADDR + frontEnd * NUM_FE_LEVELS + ADC_MINUS_1);
-		 tempADCData.ADCplus1Count = Xil_In32(XPAR_FRONTENDMONITORIP_V1_0_BASEADDR + frontEnd * NUM_FE_LEVELS + ADC_MINUS_3);
-		 tempADCData.ADCplus3Count = Xil_In32(XPAR_FRONTENDMONITORIP_V1_0_BASEADDR + frontEnd * NUM_FE_LEVELS + ADC_MINUS_1);
+    while (1)
+    {
+        for (frontEnd = 0; frontEnd < NUM_FE_INPUTS; frontEnd++)
+        {
+        	/*code for retrieval of front end data*/
+        	/*XPAR_FRONTENDMONITORIP_V1_0_BASEADDR was in the original code, but is not defined in any header file*/
+        	tempADCData.ADCminus3Count = Xil_In32(XPAR_FRONTENDMONITORIP_V1_0_BASEADDR + frontEnd * NUM_FE_LEVELS + ADC_MINUS_3);
+        	tempADCData.ADCminus1Count = Xil_In32(XPAR_FRONTENDMONITORIP_V1_0_BASEADDR + frontEnd * NUM_FE_LEVELS + ADC_MINUS_1);
+        	tempADCData.ADCplus1Count = Xil_In32(XPAR_FRONTENDMONITORIP_V1_0_BASEADDR + frontEnd * NUM_FE_LEVELS + ADC_MINUS_3);
+        	tempADCData.ADCplus3Count = Xil_In32(XPAR_FRONTENDMONITORIP_V1_0_BASEADDR + frontEnd * NUM_FE_LEVELS + ADC_MINUS_1);
 
-		/* calculation for distribution */
-		totalCount = tempADCData.ADCplus3Count + tempADCData.ADCplus1Count + tempADCData.ADCminus1Count + tempADCData.ADCminus3Count;
-		totalSig = ((3*tempADCData.ADCplus3Count)+ tempADCData.ADCplus1Count) - ((-3*tempADCData.ADCminus3Count)+ -1*tempADCData.ADCminus1Count);
-		if(totalSig > 0)
-		{
-			tempADCData.ADCpercentPos = (float)((3*tempADCData.ADCplus3Count)+tempADCData.ADCplus1Count)/(float)totalSig;
-		}
-		if(totalCount > 0)
-		{
-			tempADCData.ADCpercentMag = (float)((float)(tempADCData.ADCplus3Count + tempADCData.ADCminus3Count))/(float)totalCount;
-		}
+            /* Send data to the message queue */
+            xQueueSend(xQueue, &tempADCData, portMAX_DELAY);
+        }
 
-		/* Write outputs */
-		frontEndTelemetry[frontEnd]= tempADCData;
-	}
+        /* Add a delay to prevent task starvation */
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
 }
 
+void calculateDistribution(void *pvParameters)
+{
+    QueueHandle_t xQueueComms = (QueueHandle_t)pvParameters;
+    tsFrontEndMonStruct tempADCData;
+    float totalCount = 0;
+    float totalSig = 0.0;
+    uint8_t frontEnd;
+
+    while (1)
+    {
+        for (frontEnd = 0; frontEnd < NUM_FE_INPUTS; frontEnd++)
+        {
+            /* Receive data from the message queue */
+            xQueueReceive(xQueue, &tempADCData, portMAX_DELAY);
+
+            /* Calculate the distribution */
+            totalCount = tempADCData.ADCplus3Count + tempADCData.ADCplus1Count + tempADCData.ADCminus1Count + tempADCData.ADCminus3Count;
+            totalSig = ((3*tempADCData.ADCplus3Count)+ tempADCData.ADCplus1Count) - ((-3*tempADCData.ADCminus3Count)+ -1*tempADCData.ADCminus1Count);
+            if(totalSig > 0)
+            {
+            	tempADCData.ADCpercentPos = (float)((3*tempADCData.ADCplus3Count)+tempADCData.ADCplus1Count)/(float)totalSig;
+            }
+         	if(totalCount > 0)
+            {
+            	tempADCData.ADCpercentMag = (float)((float)(tempADCData.ADCplus3Count + tempADCData.ADCminus3Count))/(float)totalCount;
+            }
+
+            /* Write outputs */
+            frontEndMon[frontEnd] = tempADCData;
+
+            /* Send data to the Comms message queue */
+            xQueueSend(xQueueComms, &tempADCData, portMAX_DELAY);
+        }
+
+        /* Add a delay to prevent task starvation */
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+void Comms(void *pvParameters)
+{
+    QueueHandle_t xQueueComms = (QueueHandle_t)pvParameters;
+    tsFrontEndMonStruct tempADCData;
+    uint8_t frontEnd;
+
+    while (1)
+    {
+        for (frontEnd = 0; frontEnd < NUM_FE_INPUTS; frontEnd++)
+        {
+            /* Receive data from the Comms message queue */
+            xQueueReceive(xQueueComms, &tempADCData, portMAX_DELAY);
+
+            /* Send data via UART */
+            xil_printf("FrontEnd: %d, ADC%%Pos: %.2f, ADC%%Mag: %.2f\r\n",
+                       frontEnd, tempADCData.ADCpercentPos, tempADCData.ADCpercentMag);
+        }
+
+        /* Add a delay to prevent task starvation */
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+void timerCallback(TimerHandle_t xTimer)
+{
+    /* Execute required actions within the timer callback function */
+    xil_printf("Timer tick\r\n");
+}
+
+/* Task for handling GPIOs */
+void gpioTask(void *pvParameters)
+{
+    int i = 0;
+
+    // set GPIO to outputs
+    Xil_Out32(XPAR_GPIO_0_BASEADDR + 0x04, 0x0000);
+
+    while (1)
+    {
+        // set some GPIOs on
+        usleep(1000000);
+        Xil_Out32(XPAR_GPIO_0_BASEADDR + 0x0, i);
+        usleep(1000000);
+        // set some GPIOs on
+        Xil_Out32(XPAR_GPIO_0_BASEADDR + 0x0, i);
+
+        if (i == 255)
+        {
+            i = 0;
+        }
+        else
+        {
+            i++;
+        }
+    }
+}
 
 int main()
 {
-    int i;
 	init_platform();
 	init_frontEnd(&frontEndMon[0]);
 
-    print("Hello World\n\r");
+	print("Hello World\n\r");
 
-    // set GPIO to outputs
-    Xil_Out32(XPAR_GPIO_0_BASEADDR + 0x04,0x0000);
-    i = 0;
-    while(1)
-    {
-    	// set some GPIOs on
-    	usleep(1000000);
-    	Xil_Out32(XPAR_GPIO_0_BASEADDR+ 0x0,i);
-		usleep(1000000);
-		// set some GPIOs on
-		Xil_Out32(XPAR_GPIO_0_BASEADDR+ 0x0,i);
-		if (i == 255)
-		{
-			i = 0;
-		}
-		else
-		{
-			i++;
-		}
+	/* Create a message queue for data transmission between tasks */
+	xQueue = xQueueCreate(NUM_FE_INPUTS, sizeof(tsFrontEndMonStruct));
+    if (xQueue == NULL)
+	{
+	    print("Failed to create message queue.\n\r");
+	    return 1;
+	}
 
-		//getFrontEndMonitorValues(&frontEndMon[0]);
+	/* Create a message queue for data transmission between calculateDistribution and Comms tasks */
+	QueueHandle_t xQueueComms = xQueueCreate(NUM_FE_INPUTS, sizeof(tsFrontEndMonStruct));
+	if (xQueueComms == NULL)
+	{
+	    print("Failed to create Comms message queue.\n\r");
+	    return 1;
+	}
 
-    }
+	/* Create tasks */
+	xTaskCreate(retrieveFrontEndData, "RetrieveData", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
+	xTaskCreate(calculateDistribution, "CalcDist", configMINIMAL_STACK_SIZE, xQueueComms, tskIDLE_PRIORITY + 1, NULL);
+	xTaskCreate(Comms, "Comms", configMINIMAL_STACK_SIZE, xQueueComms, tskIDLE_PRIORITY + 1, NULL);
+	xTaskCreate(gpioTask, "GPIO", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
 
+	/* Create a timer */
+	TimerHandle_t xTimer = xTimerCreate("MyTimer", pdMS_TO_TICKS(1000), pdTRUE, (void *)0, timerCallback);
+	if (xTimer == NULL)
+	{
+	    print("Failed to create timer.\n\r");
+	    return 1;
+	}
 
+	/* Start the timer */
+	xTimerStart(xTimer, 0);
 
-    cleanup_platform();
-    return 0;
+	/* Start scheduler */
+	vTaskStartScheduler();
+
+	cleanup_platform();
+	return 0;
 }
+
