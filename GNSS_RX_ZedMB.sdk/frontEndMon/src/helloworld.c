@@ -73,6 +73,7 @@ tsFrontEndMonStruct frontEndMon[NUM_FE_INPUTS];
 void retrieveFrontEndData(void *pvParameters);
 void calculateDistribution(void *pvParameters);
 void Comms(void *pvParameters);
+void SPI(void *pvParameters);
 
 /* Timer declaration */
 void timerCallback(TimerHandle_t xTimer);
@@ -82,6 +83,34 @@ void gpioTask(void *pvParameters);
 
 /*Declare xQueue */
 QueueHandle_t xQueue;
+
+typedef struct {
+    /* health data */
+    uint16_t temperature;
+    uint16_t voltage;
+    uint16_t AOK;
+} tsHealthDataStruct;
+
+void retrieveHealthData(tsHealthDataStruct *healthData) {
+   /* Need method of retrieving data from the front end*/
+}
+
+void SPI(void *pvParameters) {
+    QueueHandle_t xQueueSPIComms = (QueueHandle_t)pvParameters;
+    tsHealthDataStruct tempHealthData;
+
+    while (1) {
+    	/*Retrieve the health data from the Front-End*/
+        retrieveHealthData(&tempHealthData);
+
+        /* Send data to the SPIComms message queue */
+        xQueueSend(xQueueSPIComms, &tempHealthData, portMAX_DELAY);
+
+        /* Add a delay to prevent task starvation */
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
 
 void init_frontEnd(tsFrontEndMonStruct * frontEndTelemetry)
 {
@@ -166,7 +195,10 @@ void calculateDistribution(void *pvParameters)
 void Comms(void *pvParameters)
 {
     QueueHandle_t xQueueComms = (QueueHandle_t)pvParameters;
+    QueueHandle_t xQueueSPIComms = (QueueHandle_t)pvParameters;
+
     tsFrontEndMonStruct tempADCData;
+    tsHealthDataStruct tempHealthData;
     uint8_t frontEnd;
 
     while (1)
@@ -175,6 +207,9 @@ void Comms(void *pvParameters)
         {
             /* Receive data from the Comms message queue */
             xQueueReceive(xQueueComms, &tempADCData, portMAX_DELAY);
+
+            /* Receive data from the SPIComms message queue */
+            xQueueReceive(xQueueSPIComms, &tempHealthData, portMAX_DELAY);
 
             /* Send data via UART */
             xil_printf("FrontEnd: %d, ADC%%Pos: %.2f, ADC%%Mag: %.2f\r\n",
@@ -235,6 +270,12 @@ int main()
 	    return 1;
 	}
 
+    /* Create a message queue for data transmission between SPI and Comms tasks */
+    QueueHandle_t xQueueSPIComms = xQueueCreate(10, sizeof(tsHealthDataStruct));
+    if (xQueueSPIComms == NULL) {
+        print("Failed to create SPIComms message queue.\n\r");
+        return 1;
+    }
 	/* Create a message queue for data transmission between calculateDistribution and Comms tasks */
 	QueueHandle_t xQueueComms = xQueueCreate(NUM_FE_INPUTS, sizeof(tsFrontEndMonStruct));
 	if (xQueueComms == NULL)
@@ -248,6 +289,7 @@ int main()
 	xTaskCreate(calculateDistribution, "CalcDist", configMINIMAL_STACK_SIZE, xQueueComms, tskIDLE_PRIORITY + 1, NULL);
 	xTaskCreate(Comms, "Comms", configMINIMAL_STACK_SIZE, xQueueComms, tskIDLE_PRIORITY + 1, NULL);
 	xTaskCreate(gpioTask, "GPIO", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
+	xTaskCreate(SPI, "SPI", configMINIMAL_STACK_SIZE, xQueueSPIComms, tskIDLE_PRIORITY + 1, NULL);
 
 	/* Create a timer */
 	TimerHandle_t xTimer = xTimerCreate("MyTimer", pdMS_TO_TICKS(1000), pdTRUE, (void *)0, timerCallback);
